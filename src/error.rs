@@ -11,6 +11,10 @@ use thiserror::Error;
 pub enum ToDoError {
     #[error("User account already exists")]
     UserAccountAlreadyExists,
+    #[error("Wrong credentials")]
+    WrongCredentials,
+    #[error("ToDo with such ID already exists")]
+    ToDoWithIdAlreadyExists,
     #[error("Internal server error")]
     Internal(#[from] InternalError),
 }

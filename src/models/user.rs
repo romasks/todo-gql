@@ -1,7 +1,7 @@
 use diesel::{Queryable, Selectable};
 use uuid::Uuid;
 
-#[derive(Queryable, Selectable)]
+#[derive(Queryable, Selectable, Debug)]
 #[diesel(table_name = crate::schema::users)]
 #[diesel(check_for_backend(diesel::pg::Pg))]
 pub struct User {
